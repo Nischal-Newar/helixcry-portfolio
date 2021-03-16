@@ -40,3 +40,12 @@
 .contact-content p{
     color: var(--text-color);
 }
+
+.submit-button{
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 35%;
+    width: 30%;
+    background-color: var(--text-color);
+    color: var(--icon-shade);
+}

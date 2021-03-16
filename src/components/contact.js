@@ -11,6 +11,7 @@ function Contact() {
     const submit = (e) => {
         e.preventDefault();
         alert(`
+            Thank you for messaging us! Here take a cookie!!
             Name: ${name}
             Email: ${email}
             Message: ${message}
@@ -46,8 +47,8 @@ function Contact() {
                     <Form.Control as="textarea" placeholder="Message" value={message} onChange={(e)=>setMessage(e.target.value)}/>
                 </Form.Group>
                 <Form.Group as={Row}>
-                    <Col sm={{ span: 10, offset: 2 }}>
-                    <Button type="submit" variant="primary">Submit</Button>
+                    <Col>
+                        <Button type="submit" variant="dark" className="submit-button">Submit</Button>
                     </Col>
                 </Form.Group>
             </Form>
