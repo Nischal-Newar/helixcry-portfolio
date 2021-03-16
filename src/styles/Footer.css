@@ -1,0 +1,12 @@
+:root{
+    --text-color: blanchedalmond;
+}
+
+.footer-container{
+    color: var(--text-color);
+}
+
+.footer-content{
+    font-size: 20px;
+    text-align: center;
+}
