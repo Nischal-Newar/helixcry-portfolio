@@ -160,11 +160,11 @@ const Snake = () => {
       {gameOver && <span className="score-not-btn" >GAME OVER!  SCORE : {score} </span>}
       <div className="button-group">
         <Button onClick={startGame} variant="dark" className="start-btn">START</Button>
-        <Button onClick={() => moveSnake("UP")} variant="dark" className="arrow-up-btn">&#8593;</Button>
+        <Button onClick={() => moveSnake("UP")} variant="dark" className="arrow-up-btn">W</Button>
         <ButtonGroup className="bottom-button">
-          <Button variant="dark" onClick={() => moveSnake("LEFT")}>&#8592;</Button>
-          <Button variant="dark" onClick={() => moveSnake("DOWN")}>&#8595;</Button>
-          <Button variant="dark" onClick={() => moveSnake("RIGHT")}>&#8594;</Button>
+          <Button variant="dark" onClick={() => moveSnake("LEFT")} className="wasd">A</Button>
+          <Button variant="dark" onClick={() => moveSnake("DOWN")} className="wasd">S </Button>
+          <Button variant="dark" onClick={() => moveSnake("RIGHT")}className="wasd">D</Button>
         </ButtonGroup>
         </div>
       </div>    

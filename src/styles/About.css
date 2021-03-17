@@ -11,16 +11,16 @@
 
 /* variables */
 :root{
-    --first-shade: rgba(18, 17, 19, 0.5);
-    --second-shade: rgba(62,21,209,0.5);
-    --third-shade: rgba(198, 76, 223, 0.5);
+    --first-shade: #0E0B16;
+    --first-shade-light:#181327bb ;
+    --second-shade: #A239CA;
+    --third-shade: #4717F6;
     --text-color: blanchedalmond;
-    --border-shade: #a88437;
-    --icon-shade: black;
+    --box-shade: #E7DFDD;
 }
 
 .about-container{
-    background: linear-gradient(to top right, var(--first-shade), var(--second-shade));
+    background: (var(--first-shade-light));
 }
 
 .about-head{
@@ -31,7 +31,8 @@
 }
 
 .about-item{
-    background-image: linear-gradient(to bottom right, var(--first-shade), var(--second-shade) , var(--third-shade));
+    background-image: linear-gradient(to top left, var(--first-shade), var(--first-shade) , var(--third-shade));
+    box-shadow: 0px 5px 10px var(--third-shade);
     margin: 20px;
     padding: 10px;
     text-align: justify;
@@ -46,10 +47,12 @@
 }
 
 .about-profile-item{
-    background-image: linear-gradient(to bottom right, var(--first-shade), var(--second-shade) , var(--third-shade));
+    background-image: linear-gradient(to top left, var(--first-shade), var(--first-shade) , var(--third-shade));
+    box-shadow: 0px 5px 10px var(--third-shade);
     margin: 20px;
     padding: 10px;
     text-align: center;
+    cursor: pointer;
 }
 
 .about-profile-item h3{

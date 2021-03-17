@@ -21,7 +21,7 @@ function About() {
             ease: "none",
             scrollTrigger: {
                 trigger: about.current,
-                start: '-600vh',
+                start: '-900vh',
                 toggleActions: 'play none none reverse'
             }
         })
@@ -34,7 +34,7 @@ function About() {
             ease: "none",
             scrollTrigger: {
                 trigger: about.current,
-                start: '-500vh',
+                start: '-800vh',
                 toggleActions: 'play none none reverse'
             }
         })
@@ -47,7 +47,7 @@ function About() {
             ease: "none",
             scrollTrigger: {
                 trigger: about.current,
-                start: '-400vh',
+                start: '-700vh',
                 toggleActions: 'play none none reverse'
             }
         })

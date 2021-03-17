@@ -11,16 +11,16 @@
 
 /* variables */
 :root{
-    --first-shade: rgba(18, 17, 19, 0.5);
-    --second-shade: rgba(62,21,209,0.5);
-    --third-shade: rgba(198, 76, 223, 0.5);
+    --first-shade: #0E0B16;
+    --second-shade: #A239CA;
+    --third-shade: #4717F6;
     --text-color: blanchedalmond;
-    --box-shade: rgb(218, 210, 210);
+    --box-shade: #E7DFDD;
     --icon-shade: black;
 }
 
 .forte-container{
-    background: linear-gradient(to top right, var(--first-shade), var(--first-shade));
+    background: linear-gradient(to right top, var(--first-shade), var(--first-shade));
 }
 
 .forte-head{
@@ -39,7 +39,7 @@
 }
 
 .forte-item{
-    background-image: linear-gradient(to bottom right, var(--first-shade), var(--second-shade) , var(--third-shade));
+    background-image: linear-gradient(to bottom right, var(--first-shade), var(--first-shade),var(--second-shade));
     border-radius: 20px 0 20px 0;
     width: 100%;
     height: 100%;

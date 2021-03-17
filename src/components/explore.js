@@ -47,22 +47,28 @@ export default function Explore() {
           <div className="explore-head">
                 <h2>Our Work</h2>
           </div>
-          <Row className="explore-content">
+          <div class="container">
+          <div class="row explore-content">
               {
                 ExploreData.map((item) => (
-                  <Col sm={12}>
-                    <Card className="explore-item" bg="dark">
-                      <a href={item.link}>
-                        <Card.Img src={GrimCry} as="img"/>
+                  <>
+                  <div class = "col-md-4 ">
+                    <div className="explore-item" bg="dark">
+                      <a href={item.link} class="nostyle" target = "_blank">
+                        <img src={GrimCry} className="img-fluid" as="img"/>
                       </a>
-                      <Card.Body as="div">
-                          <Card.Text as="p">{item.description}</Card.Text>
-                      </Card.Body>
-                    </Card>
-                  </Col>
+                    </div>                    
+                  </div>
+                    <div class = "col-md-8 explore-item explore-item-text">
+                    <a href={item.link} class="nostyle" target = "_blank"> <p>{item.description}</p> </a>
+                    </div>
+               </>
+
                 ))
               }
-          </Row>
+          </div>
+          </div>
+          
         </section>
       </>
     )

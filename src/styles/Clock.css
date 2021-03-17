@@ -22,7 +22,7 @@
 .clock-content{
     color: var(--text-color);
     font-family: '8-bit-heading';
-    font-size: 30px;
-    margin: 30px;
+    font-size: 50px;
+    margin: 50px;
     text-align: center;
 }

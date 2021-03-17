@@ -27,7 +27,7 @@ function Navbars() {
   },[])
 
   return(
-    <Navbar bg="dark" variant="dark" className="nav-container">
+    <Navbar variant="dark" className="nav-container">
       <Navbar.Brand className="nav-btn">
          HelixCry
       </Navbar.Brand>

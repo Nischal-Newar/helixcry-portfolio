@@ -11,21 +11,15 @@ function Contact() {
     const submit = (e) => {
         e.preventDefault();
         alert(`
-            Thank you for messaging us! Here take a cookie!!
-            Name: ${name}
-            Email: ${email}
-            Message: ${message}
+            Thank you for contacting us! Here take a cookie!!
         `)
-        setName('')
-        setEmail('')
-        setMessage('')
     }
 
     return (
         <>
         <section id="contact" className="contact-container">
             <div className="contact-head">
-                <h2>SEND US A MESSAGE</h2>
+                <h2>CONTACT US</h2>
             </div>
             <Form onSubmit={submit} className="contact-content">
                 <Form.Group as={Row} className="contact-item">
@@ -48,7 +42,9 @@ function Contact() {
                 </Form.Group>
                 <Form.Group as={Row}>
                     <Col>
+                    <a href="mailto:helixcry@gmail.com">
                         <Button type="submit" variant="dark" className="submit-button">Submit</Button>
+                    </a>
                     </Col>
                 </Form.Group>
             </Form>
