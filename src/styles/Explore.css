@@ -36,20 +36,13 @@
 .explore-content{
     background-image: linear-gradient(to top left, var(--third-shade), var(--first-shade-light), var(--second-shade));
     border-radius: 20px;
-    /* width: 100%; */
-    /* height: 100%; */
 }
 .container{
     padding:30px;
 }
 
 .explore-item{
-    /* background-image: linear-gradient(to bottom right, var(--first-shade), var(--second-shade) , var(--third-shade)); */
-    /* margin-left: 20px;
-    margin-bottom: 20px;
-    padding: 10px; */
     text-align: justify;
-    /* border-style: solid; */
 }
 
 .explore-item-text{

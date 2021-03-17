@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import ExploreData from './data/exploreData'
 import GrimCry from '../static/images/GrimCry.jpg'
-import {Row,Card,Col} from 'react-bootstrap'
 import gsap from "gsap"
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import '../styles/Explore.css'
@@ -54,16 +53,15 @@ export default function Explore() {
                   <>
                   <div class = "col-md-4 ">
                     <div className="explore-item" bg="dark">
-                      <a href={item.link} class="nostyle" target = "_blank">
-                        <img src={GrimCry} className="img-fluid" as="img"/>
+                      <a href={item.link} class="nostyle" target = "_blank" rel="noreferrer">
+                        <img src={GrimCry} className="img-fluid" alt="GrimCry"/>
                       </a>
                     </div>                    
                   </div>
-                    <div class = "col-md-8 explore-item explore-item-text">
-                    <a href={item.link} class="nostyle" target = "_blank"> <p>{item.description}</p> </a>
-                    </div>
-               </>
-
+                  <div class = "col-md-8 explore-item explore-item-text">
+                    <a href={item.link} class="nostyle" target = "_blank" rel="noreferrer"> <p>{item.description}</p> </a>
+                  </div>
+                  </>
                 ))
               }
           </div>

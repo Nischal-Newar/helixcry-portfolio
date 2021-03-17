@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import {Form,Row,Col,Button} from 'react-bootstrap'
+import * as EmailJs from 'emailjs-com'
 import '../styles/Contact.css'
 
 function Contact() {
@@ -9,10 +10,34 @@ function Contact() {
     const [message, setMessage] = useState("")
 
     const submit = (e) => {
-        e.preventDefault();
-        alert(`
-            Thank you for contacting us! Here take a cookie!!
-        `)
+        e.preventDefault()
+
+        let templateParams = {
+            from_name: name,
+            from_email: email,
+            from_message: message,
+        }
+
+        EmailJs.send(
+            'helixcry_website',
+            'helixcry_portfolio',
+            templateParams,
+            'user_1VrH10Yr3IEWHROeLRAe6'
+        ).then(res => {
+            alert(`
+                    Hello ${name}!! Thank you for contacting us.
+                    Here Have some cookies!!
+                `)
+        }).catch(error => {
+            console.log(error)
+            alert(
+                `Hello ${name}. Sorry we were unable to deliver your message at this moment.`
+            )
+        })
+
+        setName('');
+        setMessage('');
+        setEmail('');
     }
 
     return (
