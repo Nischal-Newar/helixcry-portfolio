@@ -7,6 +7,7 @@ import gsap from "gsap"
 import {ScrollTrigger} from "gsap/ScrollTrigger"
 import '../styles/About.css'
 
+
 function About() {
 
     const about = useRef(null)
@@ -78,10 +79,10 @@ function About() {
                                 <Card.Body as="div">
                                     <Card.Title as="h3">{item.name}</Card.Title>
                                     <Card.Text as="p">
-                                        <a href={item.linkedIn}><AiFillLinkedin/></a>
-                                        <a href={item.steam}><SiSteam/></a>
-                                        <a href={item.github}><AiFillGithub/></a>
-                                        <a href={item.medium}><AiFillMediumCircle/></a>
+                                        <a href={item.linkedIn} target="_blank" rel="noreferrer"><AiFillLinkedin/></a>
+                                        <a href={item.steam} target="_blank" rel="noreferrer"><SiSteam/></a>
+                                        <a href={item.github} target="_blank" rel="noreferrer"><AiFillGithub/></a>
+                                        <a href={item.medium} target="_blank" rel="noreferrer"><AiFillMediumCircle/></a>
                                     </Card.Text>
                                 </Card.Body>
                             </Card>

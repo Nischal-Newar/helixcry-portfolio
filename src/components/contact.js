@@ -26,12 +26,12 @@ function Contact() {
         ).then(res => {
             alert(`
                     Hello ${name}!! Thank you for contacting us.
-                    Here Have some cookies!!
+                    Here have some cookies!!
                 `)
         }).catch(error => {
             console.log(error)
             alert(
-                `Hello ${name}. Sorry we were unable to deliver your message at this moment.`
+                `Hello ${name}. Sorry we are unable to deliver your message at this moment.`
             )
         })
 
@@ -51,25 +51,27 @@ function Contact() {
                     <Form.Label as="p">
                         Full Name
                     </Form.Label>
-                    <Form.Control as="input" placeholder="Enter Your Name" value={name} onChange={(e)=>setName(e.target.value)}/>
+                    <Form.Control as="input" placeholder="Enter Your Name" value={name} onChange={(e) => setName(e.target.value)} required/>
                 </Form.Group>
                 <Form.Group as={Row} className="contact-item">
                     <Form.Label as="p">
                         Email Address
                     </Form.Label>
-                    <Form.Control as="input" placeholder="Enter Your Email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                    <Form.Control as="input" placeholder="Enter Your Email" value={email} onChange={(e)=> setEmail(e.target.value)} required/>
+                    {
+                        (!(email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i))&&email.length>0)?
+                        <span style={{color: 'red', margin:"10px"}}>Invalid Email Address</span>:null
+                    }
                 </Form.Group>
                 <Form.Group as={Row} className="contact-item">
                     <Form.Label as="p">
                         Message
                     </Form.Label>
-                    <Form.Control as="textarea" placeholder="Message" value={message} onChange={(e)=>setMessage(e.target.value)}/>
+                    <Form.Control as="textarea" placeholder="Message" value={message} onChange={(e)=>setMessage(e.target.value)} required/>
                 </Form.Group>
                 <Form.Group as={Row}>
                     <Col>
-                    <a href="mailto:helixcry@gmail.com">
                         <Button type="submit" variant="dark" className="submit-button">Submit</Button>
-                    </a>
                     </Col>
                 </Form.Group>
             </Form>
